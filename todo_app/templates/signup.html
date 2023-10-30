@@ -1,0 +1,54 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" />
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <link rel="stylesheet"
+       href="https://fonts.googleapis.com/css2?family=font Awesome 5 Brands:wght@400&display=swap" />
+   
+   <script src="https://kit.fontawesome.com/cb792c0850.js" crossorigin="anonymous"></script>    
+</head>
+
+<body>
+    <div class="signup-login">
+        <div class="signup-box">
+            <form method="post">
+                {% csrf_token %}
+                <div class="heading">
+                    Signup
+                </div>
+                <div class="line"></div>  
+                <div class="field">
+                    <b>Username</b>    
+                    <input type="text" required class="inp" placeholders="Enter your Username" name="fnm">
+                </div>
+                <div class="field">
+                    <b>Email</b>
+                    <input type="email" required class="inp" name="email">
+                </div>
+                <div class="field">
+                    <b>Password</b>
+                    <input type="password" class="inp" name="pwd" required placeholder="Enter Password">
+                </div>
+                <div class="field">
+                    <input class="submit-button" type="Submit" value="Signup">
+                </div>    
+                <div class="line"></div>
+
+                
+                <div class="field">
+                <b style="margin-left:130px;">Already have an account?</b>
+                    <br>
+                    <a class="anc" href="/login"></a>
+                </div>
+            </form>        
+        </div>
+    </div>    
+</body>
+
+</html>
